@@ -1,0 +1,292 @@
+
+import { Project } from './types';
+
+export const casesData: Project[] = [
+  {
+    id: "1",
+    slug: "reestruturacao-suporte",
+    title: "Reestruturação Estratégica de Suporte Dedicado",
+    category: "Gestão de Operações",
+    role: "Supervisor de TI",
+    timeline: "90 Dias",
+    strategic: {
+      decision: "Descentralizar a tomada de decisão técnica, movendo a responsabilidade do Supervisor para o Líder Técnico e Analistas.",
+      risk: "Queda temporária na qualidade do atendimento (SLA) durante a curva de aprendizado da equipe e possível resistência cultural (Turnover).",
+      tradeoff: "Aceitamos uma instabilidade operacional de curto prazo (2 semanas) em troca da construção de uma equipe autogerenciável a longo prazo."
+    },
+    shortDescription: "Transformação de uma equipe com SLAs perfeitos mas desmotivada em um time autônomo e proativo através de um plano de 90 dias.",
+    fullDescription: "Diagnóstico completo de uma equipe de suporte técnico que, apesar de apresentar SLAs perfeitos, sofria com desmotivação, imaturidade processual e alta dependência da liderança.",
+    context: "Uma operação de suporte técnico apresentava métricas de SLA verdes, mas sofria internamente com alta dependência da liderança para tomadas de decisão simples e clima organizacional baixo.",
+    problem: "Imaturidade processual, centralização excessiva de decisões no supervisor e equipe desmotivada, gerando risco de burnout e turnover, apesar dos bons números superficiais.",
+    solution: "Implementação de um plano de 90 dias focado em descentralização, criação de rituais de gestão (1-on-1, Daily Huddles) e definição clara de papéis entre Supervisor e Líder Técnico.",
+    execution: "Fase 1 (0-30d): Diagnóstico comportamental e redefinição de job descriptions para Supervisor e Líder Técnico.\n\nFase 2 (30-60d): Implementação da rotina de Daily Huddles e sessões semanais de 1-on-1 focadas em PDI (Plano de Desenvolvimento Individual).\n\nFase 3 (60-90d): Rollout dos novos fluxos de escalonamento e monitoramento dos KPIs de autonomia.",
+    metrics: [
+        { label: "Reincidência", value: "-30%", description: "Redução de incidentes reincidentes após análise de causa raiz." },
+        { label: "Proatividade", value: "80%", description: "Aumento de atualizações proativas em tickets de longa duração." },
+        { label: "Autonomia", value: "+50%", description: "Redução da necessidade de intervenção do supervisor em decisões técnicas." }
+    ],
+    competencies: [
+      "Análise de Dados (SLA, TMA)",
+      "Gestão de Mudança",
+      "Liderança e Mentoria",
+      "Planejamento Estratégico"
+    ],
+    results: [
+      "Redefinição clara dos papéis de Supervisor e Líder Técnico",
+      "Ambiente de segurança psicológica estabelecido",
+      "Maturidade operacional elevada em 3 meses"
+    ],
+    lessonsLearned: [
+        "SLA verde não significa cliente satisfeito ou equipe saudável.",
+        "A descentralização de poder aumenta a velocidade de resposta.",
+        "Rituais de gestão são essenciais para manter a cultura alinhada."
+    ],
+    techStack: ["ITIL", "COBIT", "Kanban", "RCA (Root Cause Analysis)"]
+  },
+  {
+    id: "2",
+    slug: "monitoramento-maxxspy",
+    title: "Implementação de RMM (Maxxspy) - Piloto",
+    category: "Monitoramento & Segurança",
+    role: "Gestor de Projeto",
+    timeline: "30 Dias (Piloto)",
+    strategic: {
+      decision: "Implementar ferramenta de monitoramento intrusivo (RMM) em ambiente de produção sem aviso prévio de parada.",
+      risk: "Falso positivo em alertas gerando ruído excessivo para a operação e possível degradação de performance em PDVs legados.",
+      tradeoff: "Investimento inicial em licenças e tempo de configuração em troca de visibilidade total e prevenção de paradas críticas futuras."
+    },
+    shortDescription: "Projeto piloto para validar a transição de suporte reativo para proativo utilizando ferramentas de RMM em ambiente de varejo.",
+    fullDescription: "Condução de um projeto piloto de 30 dias para avaliar a ferramenta de monitoramento e gerenciamento remoto (RMM) Maxxspy no ambiente do cliente \"Mania de Churrasco\".",
+    context: "O cliente operava em modelo reativo, descobrindo falhas apenas quando a operação da loja já estava parada.",
+    problem: "Falta de visibilidade sobre a saúde dos ativos (PDVs), riscos de segurança invisíveis (patches pendentes) e softwares não autorizados.",
+    solution: "Implantação do Maxxspy em lojas piloto para coleta de dados, análise de vulnerabilidades e construção de Business Case para rollout.",
+    execution: "Instalação do agente Maxxspy em lojas piloto selecionadas.\nConfiguração de políticas de alerta para CPU, Disco e Serviços Críticos.\nColeta e análise de dados durante 30 dias.\nElaboração de relatório executivo demonstrando ROI e riscos evitados.",
+    metrics: [
+        { label: "Segurança", value: "170", description: "Patches de segurança pendentes identificados no ambiente." },
+        { label: "Ofensor", value: "60%", description: "Porcentagem de alertas gerados por um único dispositivo crítico (PDV01-MC18)." },
+        { label: "Compliance", value: "63%", description: "Índice de conformidade de patches encontrado no início do piloto." }
+    ],
+    competencies: [
+      "Gestão de Projetos Piloto",
+      "Análise de ROI",
+      "Gestão de Vulnerabilidades",
+      "ITAM"
+    ],
+    results: [
+      "Identificação precisa de dispositivos críticos",
+      "Detecção de shadow IT (ex: Disney+ instalados)",
+      "Aprovação para expansão baseada em ROI de prevenção"
+    ],
+    lessonsLearned: [
+        "A visibilidade precede a estabilidade.",
+        "Dados concretos de vulnerabilidade facilitam a venda de projetos de segurança.",
+        "Um único endpoint desatualizado pode comprometer toda a rede."
+    ],
+    techStack: ["Maxxspy RMM", "Windows Server/10/11", "TeamViewer", "Análise de ROI"]
+  },
+  {
+    id: "3",
+    slug: "manutencao-preventiva-carrossel",
+    title: "Modelo Carrossel Trimestral de Manutenção",
+    category: "Gestão de Serviços",
+    role: "Planejamento Estratégico",
+    timeline: "Implementação 2026",
+    strategic: {
+      decision: "Alterar o modelo de contrato de visitas mensais fixas para um modelo rotativo especializado (Sistêmico/Físico/Remoto).",
+      risk: "Logística complexa de agendamento e possível resistência dos gerentes de loja acostumados com a presença física mensal 'padrão'.",
+      tradeoff: "Aumento na complexidade de gestão logística em troca de dobrar a cobertura de lojas (21 para 42) mantendo o mesmo budget."
+    },
+    shortDescription: "Redesenho do modelo de visitas preventivas, aumentando a cobertura de lojas em 100% e eficiência das visitas em 33%.",
+    fullDescription: "Análise do modelo de visitas preventivas existente e desenvolvimento de uma nova proposta estratégica, o \"Carrossel Trimestral\", para otimizar a cobertura das 42 lojas do cliente.",
+    context: "O contrato anterior cobria apenas 21 lojas com visitas genéricas, deixando metade da rede descoberta e sem padronização.",
+    problem: "Baixa cobertura contratual e escopo de visita limitado que não prevenia falhas físicas (poeira, superaquecimento) adequadamente.",
+    solution: "Criação do ciclo \"Carrossel\": rotação entre manutenção sistêmica, física (limpeza interna) e monitoramento remoto, cobrindo todas as 42 lojas.",
+    execution: "Análise da base instalada e distribuição geográfica das 42 lojas.\nDesenho do ciclo trimestral: Mês 1 (Sistêmico), Mês 2 (Físico), Mês 3 (Remoto).\nRenegociação contratual apresentando o ganho de cobertura sem aumento proporcional de custo.\nPreparação do cronograma para início em Março/2026.",
+    metrics: [
+        { label: "Cobertura", value: "100%", description: "Aumento de 21 para 42 lojas atendidas no novo contrato." },
+        { label: "Visitas", value: "+33%", description: "Aumento de 21 para 28 visitas presenciais mensais." },
+        { label: "Eficiência", value: "Ciclo", description: "Implementação de ciclo de manutenção preditiva trimestral." }
+    ],
+    competencies: [
+      "Otimização de Processos",
+      "Negociação de Contratos",
+      "SLM (Service Level Management)",
+      "Visão Sistêmica"
+    ],
+    results: [
+      "Novo serviço de valor agregado: Limpeza interna de hardware",
+      "Redução de falhas por superaquecimento",
+      "Alinhamento estratégico com o cliente para 2026"
+    ],
+    lessonsLearned: [
+        "Modelos estáticos de manutenção tendem a se tornar ineficientes.",
+        "A manutenção física (limpeza) é tão crítica quanto a lógica no varejo.",
+        "Otimizar a logística das visitas gera valor percebido pelo cliente."
+    ],
+    techStack: ["ClickUp", "Gestão de Contratos", "Excel Avançado"]
+  },
+  {
+    id: "4",
+    slug: "gestao-incidentes-criticos",
+    title: "Gestão de Crises e Problemas Crônicos",
+    category: "Suporte N3",
+    role: "Líder Técnico / Supervisor",
+    strategic: {
+      decision: "Assumir a coordenação direta de fornecedores terceiros (Links e Software) ao invés de apenas reportar o problema.",
+      risk: "Atrito político com fornecedores parceiros e responsabilização por falhas que não são originalmente do nosso escopo.",
+      tradeoff: "Desviar foco do Supervisor para operação 'mão na massa' temporariamente para estancar a sangria de credibilidade com o cliente."
+    },
+    timeline: "Contínuo",
+    shortDescription: "Resolução de falhas de rede complexas e coordenação de múltiplos fornecedores em lojas de alto faturamento (Prime).",
+    fullDescription: "Atuação direta na investigação e resolução de problemas técnicos complexos e recorrentes que impactavam a operação de lojas-chave, como Prime Eldorado e Prime Mais.",
+    context: "Lojas \"Flagship\" sofriam com instabilidades intermitentes que o suporte N1/N2 não conseguia diagnosticar, gerando atrito com o cliente.",
+    problem: "Falhas mascaradas (ex: infraestrutura física ruim parecendo erro de software) e \"jogo de empurra\" entre fornecedores de Link e Software.",
+    solution: "Atuação in-loco para RCA (Causa Raiz), assumindo a coordenação técnica dos fornecedores terceiros e validando infraestrutura física.",
+    execution: "Deslocamento para a unidade e isolamento do problema (segmentação da rede).\nTestes de estresse no link principal e failover.\nConvocação de técnicos das operadoras e fornecedores de software para validação conjunta.\nReestruturação do cabeamento e configuração de redundância no Mikrotik.",
+    metrics: [
+        { label: "Uptime", value: "99.9%", description: "Estabilidade recuperada em lojas críticas após intervenção." },
+        { label: "Resolução", value: "Definitiva", description: "Fim de incidentes recorrentes que duravam meses." },
+        { label: "Satisfação", value: "Alta", description: "Recuperação da confiança do cliente na gestão técnica." }
+    ],
+    competencies: [
+      "Troubleshooting Avançado",
+      "Gestão de Crise",
+      "Gestão de Fornecedores",
+      "Comunicação Executiva"
+    ],
+    results: [
+      "Resolução de falha crônica de failover na loja Prime Mais",
+      "Diagnóstico de problemas de infraestrutura física mascarados",
+      "Implementação de validação fotográfica de serviços"
+    ],
+    lessonsLearned: [
+        "Problemas lógicos muitas vezes escondem falhas físicas.",
+        "Em crises, assumir a coordenação dos fornecedores é vital.",
+        "Documentação fotográfica previne retrabalho e ambiguidade."
+    ],
+    techStack: ["Mikrotik RouterOS", "WinBox", "Diagnóstico de Redes", "Sistemas de PDV"]
+  },
+  {
+    id: "5",
+    slug: "governanca-padronizacao",
+    title: "Governança Operacional e Documentação",
+    category: "Governança de TI",
+    role: "Supervisor de TI",
+    timeline: "Projeto Estrutural",
+    strategic: {
+      decision: "Paralisar iniciativas de novos projetos não-críticos para focar 100% na documentação e padronização (Housekeeping).",
+      risk: "Percepção de 'lentidão' na entrega de novidades por parte da diretoria durante a fase de estruturação.",
+      tradeoff: "Investir tempo agora em burocracia/documentação para reduzir drasticamente o tempo de onboarding e erros operacionais no futuro."
+    },
+    shortDescription: "Criação da \"Constituição\" da operação: Manuais, SOPs e Matrizes de responsabilidade para 4 níveis hierárquicos.",
+    fullDescription: "Criação de um conjunto completo de documentação para padronizar a operação de suporte técnico dedicado e de campo, garantindo consistência e qualidade.",
+    context: "O conhecimento estava tácito (nas cabeças das pessoas), gerando inconsistência no atendimento e dificuldade no onboarding de novos técnicos.",
+    problem: "Falta de padrão no acionamento de campo e ambiguidade sobre as responsabilidades de cada nível (Analista vs Líder vs Supervisor).",
+    solution: "Desenvolvimento de Manuais de Função por cargo e SOPs detalhados (Escopos 1, 2 e 3) para cada tipo de intervenção técnica.",
+    execution: "Mapeamento dos processos atuais e entrevistas com a equipe.\nRedação dos manuais técnicos e funcionais (Analista, Líder, Supervisor).\nValidação dos fluxos com a diretoria.\nTreinamento da equipe e publicação na base de conhecimento.",
+    metrics: [
+        { label: "Documentos", value: "4", description: "Manuais completos de função criados e implantados." },
+        { label: "Processos", value: "3", description: "Definição formal de Escopos de Serviço (Nível 1, 2 e 3)." },
+        { label: "Qualidade", value: "Padronizada", description: "Redução de variabilidade na execução de tarefas." }
+    ],
+    competencies: [
+      "Redação Técnica",
+      "Mapeamento de Processos",
+      "Definição de RACI",
+      "Treinamento"
+    ],
+    results: [
+      "Redução de visitas de campo improdutivas (SOP de acionamento)",
+      "Base de conhecimento para auditoria e treinamento",
+      "Formalização de Escopos de Serviço"
+    ],
+    lessonsLearned: [
+        "O que não está escrito, não existe para a operação.",
+        "Manuais devem ser documentos vivos e de fácil acesso.",
+        "A clareza de papéis reduz conflitos internos."
+    ],
+    techStack: ["ITIL v4", "BPMN", "Gestão de Conhecimento", "Office 365"]
+  },
+  {
+    id: "6",
+    slug: "padronizacao-infra-lojas",
+    title: "Padronização de Infraestrutura (80 Lojas)",
+    category: "Infraestrutura",
+    role: "Líder de Projeto",
+    timeline: "Rollout",
+    strategic: {
+      decision: "Padronizar o hardware e endereçamento IP de todas as 80 lojas, exigindo paradas programadas.",
+      risk: "Impacto no faturamento das lojas caso as janelas de manutenção excedam o horário previsto.",
+      tradeoff: "Alto custo logístico e operacional inicial (CAPEX) para viabilizar gestão remota centralizada e segura (redução de OPEX)."
+    },
+    shortDescription: "Padronização lógica e física de 80 unidades de varejo, garantindo segurança via VPN e consistência operacional.",
+    fullDescription: "Liderança na padronização tecnológica de aproximadamente 80 lojas distribuídas entre São Paulo e Minas Gerais (Rede Setee).",
+    context: "Crescimento da rede gerou um parque tecnológico heterogêneo, difícil de gerenciar e inseguro.",
+    problem: "Disparidade de configurações, falta de segurança nas conexões remotas e dificuldade de suporte devido à falta de padrão.",
+    solution: "Definição de layout técnico padrão, implementação de VPN Microsoft com IP Fixo e reestruturação de cabeamento.",
+    execution: "Levantamento do inventário de hardware e rede das 80 lojas.\nDefinição da \"Golden Image\" e padrão de endereçamento IP.\nCronograma de visitas para readequação física e lógica.\nConfiguração de VPNs site-to-site e client-to-site.",
+    metrics: [
+        { label: "Escopo", value: "80", description: "Lojas padronizadas em SP e MG." },
+        { label: "Segurança", value: "VPN", description: "100% das conexões remotas criptografadas." },
+        { label: "Gestão", "value": "Central", description: "Possibilidade de gestão centralizada eficaz." }
+    ],
+    competencies: [
+      "Gestão de Logística",
+      "Networking (LAN/WAN)",
+      "Segurança da Informação",
+      "Escalabilidade"
+    ],
+    "results": [
+      "Consistência e estabilidade operacional em toda a rede",
+      "Documentação base para expansão futura",
+      "Redução do tempo de atendimento devido à padronização"
+    ],
+    lessonsLearned: [
+        "A padronização é o primeiro passo para a escalabilidade.",
+        "Segurança não pode ser um \"add-on\", deve ser nativa da arquitetura.",
+        "Logística é tão importante quanto a técnica em projetos distribuídos."
+    ],
+    techStack: ["VPN Microsoft", "Cabeamento Estruturado", "TCP/IP", "Políticas de Segurança"]
+  },
+  {
+    id: "7",
+    slug: "modernizacao-servidores",
+    title: "Modernização de Data Center e Virtualização",
+    category: "Infraestrutura",
+    role: "Arquiteto de Solução",
+    timeline: "Projeto Turnkey",
+    strategic: {
+      decision: "Migrar do modelo físico legado para ambiente 100% virtualizado (Hyper-V) com redundância.",
+      risk: "Perda de dados críticos ou inoperância do ERP durante a migração dos sistemas legados.",
+      tradeoff: "Complexidade técnica elevada e maior custo de hardware inicial em troca de Recuperação de Desastres (DR) e Alta Disponibilidade."
+    },
+    shortDescription: "Migração de servidores legados para ambiente virtualizado (Hyper-V) com redundância e backup estruturado.",
+    fullDescription: "Responsável pelo projeto completo de substituição e modernização dos servidores legados do escritório central da Rede Setee.",
+    context: "Servidores físicos antigos representavam risco crítico de parada da operação administrativa e financeira.",
+    problem: "Hardware obsoleto, sem garantia, operating systems desatualizados e rotina de backup frágil.",
+    solution: "Aquisição de Dell PowerEdge, implementação de Windows Server 2016 com Hyper-V e estratégia de backup 3-2-1.",
+    execution: "Dimensionamento da carga de trabalho e especificação do novo hardware.\nInstalação e configuração do Hyper-V Host e VMs.\nMigração dos dados e serviços (AD, Arquivos, ERP) fora do horário comercial.\nConfiguração das rotinas de backup e testes de restore.",
+    metrics: [
+        { label: "Disponibilidade", value: "High", description: "Implementação de redundância e virtualização." },
+        { label: "RPO/RTO", value: "24h", description: "Ciclos de backup reduzidos para janelas de 24 horas." },
+        { label: "Modernização", value: "2016", description: "Atualização do parque de OS para Windows Server 2016." }
+    ],
+    competencies: [
+      "Arquitetura de Servidores",
+      "Virtualização",
+      "Continuidade de Negócio (BCP)",
+      "Orçamentação Técnica"
+    ],
+    results: [
+      "Ambiente virtualizado de alta disponibilidade",
+      "Estratégia de backup robusta (Físico + Cloud)",
+      "Migração transparente para o usuário final"
+    ],
+    lessonsLearned: [
+        "Backup sem teste de restore não é backup.",
+        "A virtualização traz flexibilidade essencial para recuperação de desastres.",
+        "Planejamento de migração deve considerar sempre o pior cenário."
+    ],
+    techStack: ["Windows Server 2016", "Hyper-V", "Active Directory", "Dell PowerEdge", "Backup Strategies"]
+  }
+];
