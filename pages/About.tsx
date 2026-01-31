@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Section } from '../components/UIComponents';
 import { PROFILE } from '../constants';
@@ -57,7 +58,7 @@ const About: React.FC = () => {
                   <p className="text-sm text-slate-400">Desenvolvimento de autonomia e segurança psicológica. Acredito que processos servem às pessoas, não o contrário.</p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-1">Dados > Opinião</h3>
+                  <h3 className="font-bold text-white mb-1">Dados &gt; Opinião</h3>
                   <p className="text-sm text-slate-400">Decisões baseadas em indicadores (TMA, SLA, MTTR) e análise de causa raiz (RCA).</p>
                 </div>
                 <div>
