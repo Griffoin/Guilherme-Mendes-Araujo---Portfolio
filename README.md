@@ -28,9 +28,6 @@ Essa separação garante leitura rápida para gestores e aprofundamento técnico
 - Estrutura baseada em componentes reutilizáveis
 - Conteúdo desacoplado do código (JSON)
 
-## Deploy
-
-O projeto está preparado para deploy contínuo e pode ser publicado em plataformas como Vercel ou Netlify.
 
 ## Observação
 
@@ -66,10 +63,6 @@ This structure allows for fast evaluation by managers and deeper technical explo
 - Vite
 - Reusable component-based architecture
 - Content decoupled from code (JSON-based)
-
-## Deployment
-
-The project is prepared for continuous deployment and can be hosted on platforms such as Vercel or Netlify.
 
 ## Note
 
